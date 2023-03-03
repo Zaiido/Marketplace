@@ -93,7 +93,7 @@ productsRouter.delete("/:productId", async (request, response, next) => {
 })
 
 
-productsRouter.post("/:productId/upload", multer().single("product"), generateBadRequest, async (request, response, next) => {
+productsRouter.post("/:productId/upload", multer().single("product"), async (request, response, next) => {
     try {
         if (request.file) {
             const fileExtension = extname(request.file.originalname)
