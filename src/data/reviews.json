@@ -30,5 +30,21 @@
         "rate": 5,
         "createdAt": "2023-03-03T13:27:18.202Z",
         "updatedAt": "2023-03-03T13:39:26.205Z"
+    },
+    {
+        "_id": "4qh8qglespibp9",
+        "comment": "Cool book.",
+        "productId": "4qhe4clesk7tzo",
+        "rate": 5,
+        "createdAt": "2023-03-03T15:44:57.020Z",
+        "updatedAt": "2023-03-03T15:44:57.020Z"
+    },
+    {
+        "_id": "4qh8qglespj36t",
+        "comment": "Cool book.",
+        "productId": "4qhe4clesk7tzo",
+        "rate": 5,
+        "createdAt": "2023-03-03T15:45:32.645Z",
+        "updatedAt": "2023-03-03T15:45:32.645Z"
     }
 ]

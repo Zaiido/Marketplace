@@ -125,7 +125,7 @@ productsRouter.post("/:productId/upload", multer().single("product"), async (req
 
 productsRouter.post("/:productId/reviews", checkReviewSchema, generateBadRequest, async (request, response, next) => {
     try {
-        const newReview = { _id: uniqid(), ...request.body, createdAt: new Date(), updatedAt: new Date() }
+        const newReview = { _id: uniqid(), ...request.body, productId: request.params.productId, createdAt: new Date(), updatedAt: new Date() }
         const reviews = await getReviews()
 
         reviews.push(newReview)
