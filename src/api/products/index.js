@@ -198,7 +198,7 @@ productsRouter.put("/:productId/reviews/:reviewId", async (request, response, ne
             }
 
         } else {
-            next(createHttpError(404, { message: `Product with id ${request.params.productId} does not exist!` }))
+            next(createHttpError(404, { message: `Product with id ${request.params.productId} does not exist or has no reviews yet!` }))
         }
 
     } catch (error) {
