@@ -163,7 +163,7 @@ productsRouter.get("/:productId/reviews/:reviewId", async (request, response, ne
         const reviews = await getReviews()
         const validProductId = reviews.some(review => review.productId === request.params.productId)
         if (validProductId) {
-            const foundReview = reviews.find(review => review._id === request.params.reviewId)
+            const foundReview = reviews.find(review => review._id === request.params.reviewId && review.productId === request.params.productId)
             if (foundReview) {
                 response.send(foundReview)
             } else {
@@ -184,14 +184,20 @@ productsRouter.put("/:productId/reviews/:reviewId", async (request, response, ne
         const reviews = await getReviews()
         const validProductId = reviews.some(review => review.productId === request.params.productId)
         if (validProductId) {
-            const index = reviews.findIndex(review => review._id === request.params.reviewId)
-            const oldReview = reviews[index]
-            const updatedReview = { ...oldReview, ...request.body, updatedAt: new Date() }
-            reviews[index] = updatedReview
+            const index = reviews.findIndex(review => review._id === request.params.reviewId && review.productId === request.params.productId)
+            if (index !== -1) {
+                const oldReview = reviews[index]
+                const updatedReview = { ...oldReview, ...request.body, updatedAt: new Date() }
+                reviews[index] = updatedReview
 
-            await writeReviews(reviews)
+                await writeReviews(reviews)
 
-            response.send(updatedReview)
+                response.send(updatedReview)
+            } else {
+                next(createHttpError(404, { message: `Review with id ${request.params.reviewId} does not exist!` }))
+
+            }
+
         } else {
             next(createHttpError(404, { message: `Product with id ${request.params.productId} does not exist!` }))
         }

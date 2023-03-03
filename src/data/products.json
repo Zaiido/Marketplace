@@ -1,1 +1,68 @@
-[{"_id":"4qhjw8lesd38ic","name":"3310","description":"This is an updated description of the product","brand":"nokia","imageUrl":"https://drop.ndtv.com/TECH/product_database/images/2152017124957PM_635_nokia_3310.jpeg?downsize=*:420&output-quality=80","price":100,"category":"smartphones","createdAt":"2023-03-03T09:57:17.651Z","updatedAt":"2023-03-03T10:13:16.958Z"},{"_id":"4qh5g4lesdpenb","name":"Note 20","description":"My Phone","brand":"Samsung Galaxy","imageUrl":"http://localhost:3000/images/products/4qh5g4lesdpenb.jpg","price":900,"category":"smartphones","createdAt":"2023-03-03T10:14:32.038Z","updatedAt":"2023-03-03T10:14:32.038Z"}]
+[
+    {
+        "_id": "4qhjw8lesd38ic",
+        "name": "3310",
+        "description": "This is an updated description of the product",
+        "brand": "nokia",
+        "imageUrl": "https://cdn-icons-png.flaticon.com/512/3703/3703259.png",
+        "price": 100,
+        "category": "smartphones",
+        "createdAt": "2023-03-03T09:57:17.651Z",
+        "updatedAt": "2023-03-03T10:13:16.958Z"
+    },
+    {
+        "_id": "4qh5g4lesdpenb",
+        "name": "Note 20",
+        "description": "My Phone",
+        "brand": "Samsung Galaxy",
+        "imageUrl": "http://localhost:3000/images/products/4qh5g4lesdpenb.jpg",
+        "price": 900,
+        "category": "smartphones",
+        "createdAt": "2023-03-03T10:14:32.038Z",
+        "updatedAt": "2023-03-03T10:14:32.038Z"
+    },
+    {
+        "_id": "4qhe4clesk32bl",
+        "name": "Castor Oil",
+        "description": "Amazing oil for hair, nails and skin",
+        "brand": "Special Brand",
+        "imageUrl": "https://cdn-icons-png.flaticon.com/512/3703/3703259.png",
+        "price": 10,
+        "category": "beauty",
+        "createdAt": "2023-03-03T13:13:06.944Z",
+        "updatedAt": "2023-03-03T13:13:06.944Z"
+    },
+    {
+        "_id": "4qhe4clesk4reo",
+        "name": "Bicycle",
+        "description": "Lionelo Bart Balance Bike from 2 Years up to 30 kg, Magnesium Frame, 12 Inch Wheels, Steering Wheel and Saddle Height Adjustable, Steering Wheel Lock, Footrest, Carry Handle, Ultralight",
+        "brand": "Lionelo",
+        "imageUrl": "https://cdn-icons-png.flaticon.com/512/3703/3703259.png",
+        "price": 65,
+        "category": "sport",
+        "createdAt": "2023-03-03T13:14:26.112Z",
+        "updatedAt": "2023-03-03T13:14:26.112Z"
+    },
+    {
+        "_id": "4qhe4clesk7tzo",
+        "name": "Javascript: The Definitive Guide: Master the World's Most-Used Programming Language",
+        "description": "JavaScript is the programming language of the web and is used by more software developers today than any other programming language. ",
+        "brand": "O'REILLY",
+        "imageUrl": "http://localhost:3000/images/products/4qhe4clesk7tzo.jpg",
+        "price": 57,
+        "category": "books",
+        "createdAt": "2023-03-03T13:16:49.428Z",
+        "updatedAt": "2023-03-03T13:16:49.428Z"
+    },
+    {
+        "_id": "4qhe4cleskfj8a",
+        "name": "Terracotta Round Plant Pots",
+        "description": "Great 10 pots for plants",
+        "brand": "Special brand",
+        "imageUrl": "https://cdn-icons-png.flaticon.com/512/3703/3703259.png",
+        "price": 30,
+        "category": "garden",
+        "createdAt": "2023-03-03T13:22:48.730Z",
+        "updatedAt": "2023-03-03T13:22:48.730Z"
+    }
+]

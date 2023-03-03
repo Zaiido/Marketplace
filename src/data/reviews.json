@@ -1,1 +1,34 @@
-[{"_id":"4qhn90lesg82g8","comment":"Good","productId":"4qh5g4lesdpenb","rate":5,"createdAt":"2023-03-03T11:25:01.928Z","updatedAt":"2023-03-03T11:25:01.928Z"}]
+[
+    {
+        "_id": "4qhn90lesg82g8",
+        "comment": "Good",
+        "productId": "4qh5g4lesdpenb",
+        "rate": 5,
+        "createdAt": "2023-03-03T11:25:01.928Z",
+        "updatedAt": "2023-03-03T11:25:01.928Z"
+    },
+    {
+        "_id": "4qhe4cleskjs8e",
+        "comment": "Amazing book",
+        "productId": "4qhe4clesk7tzo",
+        "rate": 5,
+        "createdAt": "2023-03-03T13:26:07.022Z",
+        "updatedAt": "2023-03-03T13:26:07.022Z"
+    },
+    {
+        "_id": "4qhe4cleskk4vg",
+        "comment": "Not so happy with it.",
+        "productId": "4qhe4clesk7tzo",
+        "rate": 2,
+        "createdAt": "2023-03-03T13:26:23.404Z",
+        "updatedAt": "2023-03-03T13:26:23.404Z"
+    },
+    {
+        "_id": "4qhe4clesklb5m",
+        "comment": "I have learned so much from this book. It is amazing.",
+        "productId": "4qhe4clesk7tzo",
+        "rate": 5,
+        "createdAt": "2023-03-03T13:27:18.202Z",
+        "updatedAt": "2023-03-03T13:39:26.205Z"
+    }
+]
