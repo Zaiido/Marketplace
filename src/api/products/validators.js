@@ -70,16 +70,6 @@ const reviewSchema = {
             options: { ignore_whitespace: true },
         },
     },
-    productId: {
-        in: ["body"],
-        isString: {
-            errorMessage: "Product ID is a mandatory field and needs to be a string!",
-        },
-        notEmpty: {
-            errorMessage: "Product ID field cannot be empty!",
-            options: { ignore_whitespace: true },
-        },
-    },
     rate: {
         in: ["body"],
         isInt: {
