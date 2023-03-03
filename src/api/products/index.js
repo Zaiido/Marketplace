@@ -1,6 +1,6 @@
 import Express from 'express'
-import { getProducts, saveProductImage, writeProducts } from '../../lib/fs-tools.js'
-import { checkProductSchema, generateBadRequest } from './validators.js'
+import { getProducts, getReviews, saveProductImage, writeProducts, writeReviews } from '../../lib/fs-tools.js'
+import { checkProductSchema, checkReviewSchema, generateBadRequest } from './validators.js'
 import uniqid from 'uniqid'
 import createHttpError from 'http-errors'
 import multer from 'multer'
@@ -114,5 +114,22 @@ productsRouter.post("/:productId/upload", multer().single("product"), async (req
     }
 })
 
+
+productsRouter.post("/:productId/reviews", checkReviewSchema, generateBadRequest, async (request, response, next) => {
+    try {
+        const newReview = { _id: uniqid(), ...request.body, createdAt: new Date(), updatedAt: new Date() }
+        const reviews = await getReviews()
+
+        reviews.push(newReview)
+
+        await writeReviews(reviews)
+
+        response.status(201).send({ _id: newReview._id })
+
+
+    } catch (error) {
+        next(error)
+    }
+})
 
 export default productsRouter

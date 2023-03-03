@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "_id": "4qhn90lesg6s1p",
+        "comment": "An amazing smartphone",
+        "productId": "4qh5g4lesdpenb",
+        "rate": 5,
+        "createdAt": "2023-03-03T11:24:01.788Z",
+        "updatedAt": "2023-03-03T11:24:01.788Z"
+    },
+    {
+        "_id": "4qhn90lesg82g8",
+        "comment": "Good",
+        "productId": "4qh5g4lesdpenb",
+        "rate": 5,
+        "createdAt": "2023-03-03T11:25:01.928Z",
+        "updatedAt": "2023-03-03T11:25:01.928Z"
+    }
+]
