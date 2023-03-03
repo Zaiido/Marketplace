@@ -96,11 +96,10 @@ export const checkReviewSchema = checkSchema(reviewSchema)
 
 export const generateBadRequest = (request, response, next) => {
     const errors = validationResult(request)
-
     if (errors.isEmpty()) {
         next()
     } else {
-        next(createHttpError(400, "Errors during post validation", { errorsList: errors.array() }))
+        next(createHttpError(400, "Errors during validation", { errorsList: errors.array() }))
     }
 }
 

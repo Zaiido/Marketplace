@@ -93,7 +93,7 @@ productsRouter.delete("/:productId", async (request, response, next) => {
 })
 
 
-productsRouter.post("/:productId/upload", multer().single("product"), async (request, response, next) => {
+productsRouter.post("/:productId/upload", multer().single("product"), generateBadRequest, async (request, response, next) => {
     try {
         if (request.file) {
             const fileExtension = extname(request.file.originalname)
@@ -113,10 +113,10 @@ productsRouter.post("/:productId/upload", multer().single("product"), async (req
             } else {
                 next(createHttpError(404, { message: `Product with id ${request.params.productId} does not exist!` }))
             }
-        } else {
-            next(createHttpError(404, { message: `Upload an image!` }))
         }
-
+        else {
+            next(createHttpError(400, { message: `Upload an image!` }))
+        }
 
     } catch (error) {
         next(error)
