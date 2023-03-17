@@ -3,9 +3,12 @@ import listEndpoints from "express-list-endpoints";
 import mongoose from "mongoose";
 import productsRouter from "./api/products/index.js";
 import { badRequestHandler, generalErrorHandler, notfoundHandler } from "./errorHandlers.js";
+import cors from 'cors'
 
 const server = Express()
 const port = 3001
+
+server.use(cors())
 
 server.use(Express.json())
 server.use("/products", productsRouter)
