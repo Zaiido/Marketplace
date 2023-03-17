@@ -1,13 +1,26 @@
 import Express from 'express'
 import createHttpError from 'http-errors'
 import { ProductsModel, ReviewsModel } from "./model.js"
+import q2m from 'query-to-mongo'
 
 const productsRouter = Express.Router()
 
 productsRouter.get("/", async (request, response, next) => {
     try {
-        const products = await ProductsModel.find()
-        response.send(products)
+        const mongoQuery = q2m(request.query)
+        const products = await ProductsModel.find(mongoQuery.criteria, mongoQuery.options.fields)
+            .skip(mongoQuery.options.skip)
+            .limit(mongoQuery.options.limit)
+            .sort(mongoQuery.options.sort)
+
+        const totalDocuments = await ProductsModel.countDocuments(mongoQuery.criteria)
+
+        response.send({
+            links: mongoQuery.links(`${process.env.BE_URL}/products`, totalDocuments),
+            totalDocuments,
+            numberOfPages: Math.ceil(totalDocuments / mongoQuery.options.limit),
+            products
+        })
 
     } catch (error) {
         next(error)
