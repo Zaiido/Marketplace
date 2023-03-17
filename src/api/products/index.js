@@ -27,7 +27,6 @@ productsRouter.get("/", async (request, response, next) => {
     }
 })
 
-
 productsRouter.post("/", async (request, response, next) => {
     try {
         const newProduct = new ProductsModel(request.body)
@@ -40,7 +39,6 @@ productsRouter.post("/", async (request, response, next) => {
 })
 
 
-
 productsRouter.get("/:productId", async (request, response, next) => {
     try {
         const foundProduct = await ProductsModel.findById(request.params.productId)
@@ -50,7 +48,6 @@ productsRouter.get("/:productId", async (request, response, next) => {
         next(error)
     }
 })
-
 
 productsRouter.put("/:productId", async (request, response, next) => {
     try {
@@ -66,7 +63,6 @@ productsRouter.put("/:productId", async (request, response, next) => {
     }
 })
 
-
 productsRouter.delete("/:productId", async (request, response, next) => {
     try {
         const deletedProduct = await ProductsModel.findByIdAndDelete(request.params.productId)
@@ -76,7 +72,6 @@ productsRouter.delete("/:productId", async (request, response, next) => {
         next(error)
     }
 })
-
 
 productsRouter.post("/:productId/reviews", async (request, response, next) => {
     try {
@@ -92,7 +87,6 @@ productsRouter.post("/:productId/reviews", async (request, response, next) => {
     }
 })
 
-
 productsRouter.get("/:productId/reviews", async (request, response, next) => {
     try {
         const foundProduct = await ProductsModel.findById(request.params.productId).populate("reviews")
@@ -105,7 +99,6 @@ productsRouter.get("/:productId/reviews", async (request, response, next) => {
         next(error)
     }
 })
-
 
 productsRouter.get("/:productId/reviews/:reviewId", async (request, response, next) => {
     try {
@@ -120,7 +113,6 @@ productsRouter.get("/:productId/reviews/:reviewId", async (request, response, ne
         next(error)
     }
 })
-
 
 productsRouter.put("/:productId/reviews/:reviewId", async (request, response, next) => {
     try {
@@ -142,7 +134,6 @@ productsRouter.put("/:productId/reviews/:reviewId", async (request, response, ne
     }
 })
 
-
 productsRouter.delete("/:productId/reviews/:reviewId", async (request, response, next) => {
     try {
         const deletedReview = await ReviewsModel.findByIdAndDelete(request.params.reviewId)
@@ -162,3 +153,4 @@ productsRouter.delete("/:productId/reviews/:reviewId", async (request, response,
 })
 
 export default productsRouter
+
